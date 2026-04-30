@@ -1,6 +1,6 @@
 # Injeplast New - Website Institucional
 
-![Status](https://img.shields.io/badge/Status-Projeto%20Privado-orange?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Projeto%20Particular-orange?style=flat-square)
 ![Build](https://img.shields.io/badge/Build-MVP%20Funcional-success?style=flat-square)
 ![Last Update](https://img.shields.io/badge/Atualizado-30/04/2026-blue?style=flat-square)
 
