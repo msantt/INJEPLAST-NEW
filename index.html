@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Injeplast - Excelência em Injeção Plástica</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Work+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="scripts/script.js">
+    <link rel="icon" type="image/png" href="assets/icons/logo-title-icon.png">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo"><img src="assets/img/LOGO/Logotipo.png" alt="Injeplast New"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#missao-valores">Missão & Valores</a></li>
+                <li><a href="#segmentos">Segmentos</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <!-- <li><a href="#funcionamento">Funcionamento</a></li> -->
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrossel -->
+    <section class="carrossel revelar" id="carrossel">
+        <div class="carrossel-container">
+            <button class="anterior" onclick="moveSlide(-1)">&#10094;</button>
+
+            <div class="carrossel-div">
+                <div class="slides">
+
+                    <div class="slide-item" onclick="abrirLightbox('assets/img/CARROSSEL/IMG-CARROSSEL-1.jpeg')">
+                        <img src="assets/img/CARROSSEL/IMG-CARROSSEL-1.jpeg" alt="">
+                        <div class="legenda"><strong>Título da Foto 01</strong></div>
+                    </div>
+
+                    <div class="slide-item" onclick="abrirLightbox('assets/img/CARROSSEL/IMG-CARROSSEL-5.jpeg')">
+                        <img src="assets/img/CARROSSEL/IMG-CARROSSEL-5.jpeg" alt="">
+                        <div class="legenda"><strong>Título da Foto 03</strong></div>
+                    </div>
+
+                    <div class="slide-item" onclick="abrirLightbox('assets/img/CARROSSEL/IMG-CARROSSEL-3.jpeg')">
+                        <img src="assets/img/CARROSSEL/IMG-CARROSSEL-3.jpeg" alt="">
+                        <div class="legenda"><strong>Título da Foto 03</strong></div>
+                    </div>
+
+                     <div class="slide-item" onclick="abrirLightbox('assets/img/CARROSSEL/IMG-CARROSSEL-4.jpeg')">
+                        <img src="assets/img/CARROSSEL/IMG-CARROSSEL-4.jpeg" alt="">
+                        <div class="legenda"><strong>Título da Foto 03</strong></div>
+                    </div>
+
+                    <div class="slide-item" onclick="abrirLightbox('assets/img/CARROSSEL/IMG-CARROSSEL-2.jpeg')">
+                        <img src="assets/img/CARROSSEL/IMG-CARROSSEL-2.jpeg" alt="">
+                        <div class="legenda"><strong>Título da Foto 02</strong></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="proximo" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero revelar" id="home">
+        <div class="hero-content">
+            <h1 class="fade-in">
+                TRANSFORMANDO
+                <span>PLÁSTICO EM SOLUÇÕES</span>
+            </h1>
+            <p class="fade-in">Excelência em injeção plástica com tecnologia de ponta, qualidade garantida e compromisso
+                ambiental.</p>
+            <a href="#contato" class="cta-button fade-in">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="sobre revelar" id="sobre">
+        <div class="section-header">
+            <h2>Sobre nós</h2>
+            <p>Liderar o mercado de injeção plástica através da inovação, qualidade e sustentabilidade</p>
+        </div>
+        <div class="sobre-content">
+            <div class="sobre-text">
+                <h3>Excelência em Cada Peça Produzida</h3>
+                <p>
+                    Na Injeplast, nosso objetivo principal é fornecer soluções completas em injeção de plásticos
+                    técnicos e termoplásticos,
+                    atendendo aos mais altos padrões de qualidade do mercado. Buscamos constantemente a excelência
+                    operacional através da
+                    modernização contínua de nossos processos e equipamentos.
+                </p>
+                <p>
+                    Trabalhamos para ser reconhecidos como referência no setor, oferecendo produtos personalizados que
+                    atendem às necessidades
+                    específicas de cada cliente, sempre com prazos competitivos e preços justos. Nossa meta é
+                    estabelecer parcerias de longo
+                    prazo baseadas em confiança, transparência e resultados consistentes.
+                </p>
+                <p>
+                    Comprometemo-nos com a sustentabilidade ambiental, implementando práticas que minimizam o impacto
+                    ecológico de nossas
+                    operações, incluindo programas de reciclagem e uso eficiente de recursos naturais.
+                </p>
+            </div>
+            <div class="sobre-visual">
+                <div class="sobre-icon"><img src="" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão e Valores -->
+    <section class="missao-valores revelar" id="missao-valores">
+        <div class="section-header">
+            <h2>Missão e Valores</h2>
+            <p>Os pilares que guiam nossa empresa rumo à excelência</p>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="icon" src="assets/icons/missao-icon.png">
+                </div>
+                <h3>Nossa Missão</h3>
+                <p>
+                    Entregar soluções em injeção plástica com excelência, unindo tecnologia de ponta, qualidade superior
+                    e uma equipe
+                    especializada, sempre com atenção aos detalhes e proximidade com nossos clientes.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img class="icon" src="assets/icons/visao-icon.png">
+                </div>
+                <h3>Nossa Visão</h3>
+                <p>
+                    Ser referência no mercado de termoplásticos, reconhecida pela inovação contínua, pelo cuidado com as
+                    pessoas e
+                    pela capacidade de transformar desafios em soluções modernas e sustentáveis.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img class="icon" src="assets/icons/valores-icon.png">
+                </div>
+                <h3>Nossos Valores</h3>
+                <ul>
+                    <li><strong>Qualidade</strong> e rigor nos projetos.</li>
+                    <li><strong>Profissionalismo</strong> e ética nas relações.</li>
+                    <li><strong>Valorização</strong> e crescimento equipe.</li>
+                    <li><strong>Inovação</strong> tecnológica e humana.</li>
+                    <li><strong>Proximidade</strong> e confiança com os cliente</li>
+                    <li><strong>Dinamismo</strong> e visão de futuro</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segmentos -->
+    <section class="segmentos revelar" id="segmentos">
+        <div class="section-header">
+            <h2>Para Quem Trabalhamos</h2>
+            <p>Atendemos diversos segmentos da indústria com soluções personalizadas</p>
+        </div>
+        <div class="segmentos-grid">
+            <div class="segmentos-card">
+                <div class="segmentos-icon">
+                    <img src="assets/icons/industrial-icon.png">
+                </div>
+                <h3>Indústria</h3>
+                <p>Componentes técnicos de alta precisão para o setor automotivo</p>
+            </div>
+            <div class="segmentos-card">
+                <div class="segmentos-icon">
+                    <img src="assets/icons/eletronico-icon.png">
+                </div>
+                <h3>Eletroeletrônicos</h3>
+                <p>Peças plásticas para equipamentos elétricos e eletrônicos</p>
+            </div>
+            <div class="segmentos-card">
+                <div class="segmentos-icon">
+                    <img src="assets/icons/casa-icon.png">
+                </div>
+                <h3>Linha Branca</h3>
+                <p>Componentes para eletrodomésticos e utilidades domésticas</p>
+            </div>
+            <div class="segmentos-card">
+                <div class="segmentos-icon">
+                    <img src="assets/icons/capacete-icon.png">
+                </div>
+                <h3>Construção Civil</h3>
+                <p>Produtos plásticos para acabamentos e instalações</p>
+            </div>
+            <div class="segmentos-card">
+                <div class="segmentos-icon">
+                    <img src="assets/icons/caixa-icon.png">
+                </div>
+                <h3>Embalagens</h3>
+                <p>Soluções em embalagens plásticas personalizadas</p>
+            </div>
+            <div class="segmentos-card">
+                 <div class="segmentos-icon">
+                    <img src="assets/icons/brinquedo-icon.png">
+                </div>
+                <h3>Brinquedos e Utilidades</h3>
+                <p>Produtos plásticos variados com acabamento diferenciado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Noticias -->
+    <section class="noticias revelar" id="noticias">
+        <div class="section-header">
+            <h2>Noticias</h2>
+            <p>Siga as últimas informações podem ser vistas abaixo:</p>
+        </div>
+        <div class="noticias-grid">
+            <div class="noticias-card">
+                <h3>Vagas</h3>
+                <p>Fique por dentro das vagas disponíveis e preencha o formulário para
+                    fazer parte de nossa equipe.
+                </p>
+            </div>
+            <div class="noticias-card">
+                <h3>Eletroeletrônicos</h3>
+                <p>Peças plásticas para equipamentos elétricos e eletrônicos</p>
+            </div>
+            <div class="noticias-card">
+                <h3>Linha Branca</h3>
+                <p>Componentes para eletrodomésticos e utilidades domésticas</p>
+            </div>
+            <div class="noticias-card">
+                <h3>Construção Civil</h3>
+                <p>Produtos plásticos para acabamentos e instalações</p>
+            </div>
+            <div class="noticias-card">
+                <h3>Embalagens</h3>
+                <p>Soluções em embalagens plásticas personalizadas</p>
+            </div>
+            <div class="noticias-card">
+                <h3>Brinquedos e Utilidades</h3>
+                <p>Produtos plásticos variados com acabamento diferenciado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionamento -->
+    <!--  <section class="funcionamento revelar" id="funcionamento">
+        <div class="section-header">
+            <h2>Como Funciona</h2>
+            <p>Nosso processo completo do primeiro contato até a entrega final</p>
+        </div>
+        <div class="processo-timeline">
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>1. Consulta Inicial</h3>
+                    <p>
+                        O cliente entra em contato conosco apresentando seu projeto. Nossa equipe técnica realiza uma
+                        análise
+                        preliminar das especificações, materiais necessários e viabilidade técnica do produto.
+                    </p>
+                </div>
+                <div class="step-number">01</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>2. Análise e Orçamento</h3>
+                    <p>
+                        Desenvolvemos um estudo detalhado incluindo análise de moldabilidade, escolha de materiais,
+                        definição de processo e estimativa de custos. Apresentamos um orçamento completo com prazos e
+                        condições.
+                    </p>
+                </div>
+                <div class="step-number">02</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>3. Desenvolvimento do Molde</h3>
+                    <p>
+                        Após aprovação, iniciamos o desenvolvimento ou adequação do molde. Utilizamos tecnologia CAD/CAM
+                        e
+                        realizamos simulações de injeção para garantir a qualidade dimensional da peça.
+                    </p>
+                </div>
+                <div class="step-number">03</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>4. Produção Piloto</h3>
+                    <p>
+                        Executamos uma produção piloto para validação do processo, ajustes finos dos parâmetros de
+                        injeção
+                        e aprovação de amostras pelo cliente antes da produção em escala.
+                    </p>
+                </div>
+                <div class="step-number">04</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>5. Produção em Escala</h3>
+                    <p>
+                        Iniciamos a produção seriada com controle rigoroso de qualidade em todas as etapas. Realizamos
+                        inspeções dimensionais, testes de resistência e controle de processo contínuo.
+                    </p>
+                </div>
+                <div class="step-number">05</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>6. Controle de Qualidade</h3>
+                    <p>
+                        Todas as peças passam por inspeção final seguindo normas ISO. Realizamos testes funcionais,
+                        inspeção visual, verificação dimensional e emissão de certificados de qualidade.
+                    </p>
+                </div>
+                <div class="step-number">06</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>7. Embalagem e Logística</h3>
+                    <p>
+                        Embalamos os produtos conforme especificações do cliente, garantindo proteção durante o
+                        transporte.
+                        Coordenamos a logística de entrega cumprindo rigorosamente os prazos acordados.
+                    </p>
+                </div>
+                <div class="step-number">07</div>
+            </div>
+
+            <div class="processo-step">
+                <div class="step-content">
+                    <h3>8. Pós-Venda e Suporte</h3>
+                    <p>
+                        Mantemos canal aberto para suporte técnico, recebimento de feedback e ajustes necessários.
+                        Oferecemos garantia dos produtos e assistência contínua para otimização de processos.
+                    </p>
+                </div>
+                <div class="step-number">08</div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contato -->
+    <section class="contato revelar" id="contato">
+        <div class="section-header">
+            <h2>Entre em Contato</h2>
+            <p>Estamos prontos para transformar sua ideia em realidade</p>
+        </div>
+        <div class="contato-container">
+            <div class="contato-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="assets/icons/localizacao-icon.png" alt="localização">
+                    </div>
+                    <div class="info-text">
+                        <h3>Endereço</h3>
+                        <p>Rua Industrial, 1234<br>Distrito Industrial<br>Conceição do Jacuípe - BA<br>CEP: 44.000-000
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="assets/icons/contato-icon.png" alt="contatos">
+                    </div>
+                    <div class="info-text">
+                        <h3>Telefone</h3>
+                        <p>
+                            Comercial: <a href="tel:+557534567890">(75) 3456-7890</a><br>
+                            WhatsApp: <a href="tel:+5575991234567">(75) 99123-4567</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="assets/icons/email-icon.png" alt="Email">
+                    </div>
+                    <div class="info-text">
+                        <h3>E-mail</h3>
+                        <p>
+                            Comercial: <a href="mailto:comercial@injeplast.com.br">comercial@injeplast.com.br</a><br>
+                            Suporte: <a href="mailto:suporte@injeplast.com.br">suporte@injeplast.com.br</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="assets/icons/horario-icon.png" alt="Horário disponível">
+                    </div>
+                    <div class="info-text">
+                        <h3>Horário de Atendimento</h3>
+                        <p>
+                            Segunda a Sexta: 07h às 17h<br>
+                            Sábado: 08h às 12h
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contato-form">
+                <h3>Entre em contato conosco:</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Descreva seu Projeto *</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content revelar">
+            <div class="footer-logo"><img src="assets/icons/footer-logotipo.png" alt=""></div>
+            <p class="footer-text">Transformando plástico em soluções desde 2010</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="YouTube">🎥</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Injeplast - Todos os direitos reservados | CNPJ: 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Comando de imagem -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <span class="fechar">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem Ampliada">
+    </div>
+
+    <!-- 1. Primeiro a biblioteca do EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- 2. Depois o SEU arquivo individual (ex: email.js) -->
+    <script src="scripts/email.js"></script>
+
+
+    
+<!-- Scripts usados de interação-->
+<script src="scripts/script.js"></script>
+
+</body>
+
+</html>
