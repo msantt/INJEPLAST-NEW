@@ -44,9 +44,13 @@ As tecnologias foram escolhidas para garantir performance e uma experiência de 
 
 📈 Roadmap de Desenvolvimento
 [x] Desenvolvimento da interface responsiva.
+
 [x] Implementação de Carrossel e Lightbox.
+
 [x] Integração funcional com EmailJS para captação de leads.
+
 [ ] Implementação de sistema de controle de entrega de moldes (MVP).
+
 [ ] Integração com banco de dados PostgreSQL.
 
 ⚖️ Propriedade e Contato
