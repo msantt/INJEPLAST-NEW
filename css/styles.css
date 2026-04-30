@@ -451,7 +451,7 @@
 
         .sobre-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
             gap: 4rem;
             align-items: center;
         }
@@ -470,29 +470,61 @@
             margin-bottom: 1.5rem;
         }
 
-        .sobre-visual {
-            position: relative;
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary) 0%, #2a9d5f 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+.sobre-visual {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent; /* ou transparente */
+}
 
-        .sobre-visual::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(45deg,
-                    transparent,
-                    transparent 20px,
-                    rgba(255, 255, 255, 0.05) 20px,
-                    rgba(255, 255, 255, 0.05) 40px);
-            animation: slide 30s linear infinite;
-        }
+.sobre-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: relative;
+    object-fit: contain; /* mostra a imagem inteira */
+    border-radius: 20px;
+    z-index: 0;
+}
+
+/* Gradiente sobre a imagem */
+.sobre-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(transparent) 0%, transparent, 100%);
+    opacity: 0.6; /* controla a intensidade do gradiente */
+    z-index: 1;
+}
+
+/* Efeito animado */
+.sobre-visual::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent px,
+        rgba(255, 255, 255, 0.05) 20px,
+        rgba(255, 255, 255, 0.05) 40px
+    );
+    animation: slide 30s linear infinite;
+    z-index: 2;
+}
+
+/* Conteúdo por cima */
+.conteudo {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+}
 
         @keyframes slide {
             0% {
