@@ -462,8 +462,8 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 80px;
-            height: 85vh;
+            margin-top: 50px;
+            height: 60vh;
             background: linear-gradient(135deg, #f8f9fa 0%, var(--secondary) 100%);
             position: relative;
             overflow: hidden;
@@ -670,8 +670,6 @@
         }
 
 
-
-
 .material-text h3 {
             font-size: 2rem;
             color: var(--primary);
@@ -682,7 +680,7 @@
 .material-content {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Colunas iguais */
-    gap: 3rem;
+    gap: 2rem;
     align-items: stretch; /* Garante que as duas colunas tenham a mesma altura */
     max-width: 1200px;
     margin: 0 auto;
