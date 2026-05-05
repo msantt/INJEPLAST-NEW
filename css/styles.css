@@ -679,12 +679,11 @@
 
 .material-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Colunas iguais */
+    grid-template-columns: 1.3fr 1.3fr; /* Colunas iguais */
     gap: 2rem;
     align-items: stretch; /* Garante que as duas colunas tenham a mesma altura */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  
+    margin-top: 5.5rem;
 }
 
 .material-visual {
