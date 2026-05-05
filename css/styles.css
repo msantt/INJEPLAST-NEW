@@ -1,5 +1,53 @@
 
 @media screen and (max-width: 768px) {
+
+
+    @media screen and (max-width: 768px) {
+    
+    /* 1. Esconde as setas de navegação (se existirem) */
+    .prev, .next, .carrossel-container > button {
+        display: none !important;
+    }
+
+    /* 2. Transforma o container de slides em um trilho de rolagem manual */
+    .slides {
+        display: flex !important;
+        overflow-x: auto !important; /* Ativa o scroll horizontal */
+        scroll-snap-type: x mandatory !important; /* Faz o efeito de "imã" */
+        scroll-behavior: smooth !important;
+        -webkit-overflow-scrolling: touch !important; /* Scroll suave no iOS */
+        transform: none !important; /* DESATIVA o controle do JavaScript que quebra o swipe */
+        width: 100% !important;
+    }
+
+    /* 3. Ajusta os itens para travarem no centro da tela */
+    .slide-item {
+        flex: 0 0 100% !important; /* Cada slide ocupa 100% da largura */
+        scroll-snap-align: center !important; /* Alinha o slide no centro ao soltar */
+        height: 350px !important; /* Altura ajustada para celular */
+    }
+
+    /* 4. Esconde a barra de rolagem horizontal para ficar limpo */
+    .slides::-webkit-scrollbar {
+        display: none !important;
+    }
+    .slides {
+        -ms-overflow-style: none !important;  
+        scrollbar-width: none !important;  
+    }
+
+    /* 5. Desativa a animação da borda no mobile se ficar pesado */
+    /* (Opcional: remova se quiser manter a borda girando no celular) */
+    .slide-item::before, .slide-item::after {
+        display: none !important; 
+    }
+    .slide-item img {
+        width: 100% !important;
+        height: 100% !important;
+        border: 2px solid var(--primary) !important; /* Borda simples para economizar processamento */
+    }
+}
+
     /* Ajuste de Containers e Grids para uma única coluna */
     .sobre-content, 
     .cards-container, 
@@ -415,7 +463,7 @@
         /* Hero Section */
         .hero {
             margin-top: 80px;
-            height: 90vh;
+            height: 85vh;
             background: linear-gradient(135deg, #f8f9fa 0%, var(--secondary) 100%);
             position: relative;
             overflow: hidden;
@@ -566,7 +614,7 @@
         }
 
         .sobre-text p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: var(--text-dark);
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -624,84 +672,92 @@
 
 
 
-        /* Objetivo da Empresa */
-        .material {
-            background: var(--white);
-        }
-
-        .material-content {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1.3fr 1.1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .material-text h3 {
+.material-text h3 {
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
 
-        .material-text p {
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
+.material-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Colunas iguais */
+    gap: 3rem;
+    align-items: stretch; /* Garante que as duas colunas tenham a mesma altura */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .material-visual {
-            position: relative;
-            height: 420px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: transparent;
-            /* ou transparente */
-        }
-
-        .material-visual img {
-             position: relative;
-    inset: 0;
+.material-visual {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
     width: 100%;
-    height: 90%;
-    object-fit: cover;   /* muda de 'contain' para 'cover' - estica para preencher */
-    border-radius: 8px;  /* borda arredondada na imagem */
-    z-index: 0;
-    border: 2px solid #c0c0c0; /* borda leve ao redor da imagem */
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.05); /* sombra muito leve para suavizar */
-        }
+    height: 100%;            /* Ocupa a altura total do grid */
+}
 
-        /* Gradiente sobre a imagem */
-        .material-visual::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(transparent) 0%, transparent, 100%);
-            opacity: 0.6;
-            /* controla a intensidade do gradiente */
-            z-index: 1;
-        }
+.material-visual img {
+    /* Use 'cover' se quiser que a imagem preencha todo o espaço da altura do texto */
+    /* Use 'contain' se quiser ver a imagem inteira sem cortes (mas pode sobrar espaço) */
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
 
-        /* Efeito animado */
-        .material-visual::after {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(45deg,
-                    transparent,
-                    transparent px,
-                    rgba(255, 255, 255, 0.05) 20px,
-                    rgba(255, 255, 255, 0.05) 40px);
-            animation: slide 30s linear infinite;
-            z-index: 2;
-        }
+.material-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha o texto no meio da altura da imagem */
+    padding: 2rem;
+}
 
+/* ... (Mantenha o seu código de Desktop como está) ... */
 
+@media (max-width: 768px) {
+    .material-content {
+        grid-template-columns: 1fr; /* Empilha imagem e texto */
+        gap: 1.5rem;
+        padding: 0 20px; /* Margem de segurança nas laterais */
+    }
+
+    .material-visual {
+        order: -1; /* Mantém a imagem no topo */
+        width: 100%;
+        height: auto; /* Deixa a altura livre para a imagem respirar */
+    }
+
+    .material-visual img {
+        width: 100%;
+        max-width: 100%; /* Ocupa a largura total disponível */
+        height: auto;
+        object-fit: contain; /* Garante que nada da imagem seja cortado no celular */
+        border-radius: 12px;
+    }
+
+    .material-text {
+        text-align: left; /* ALINHAMENTO À ESQUERDA SOLICITADO */
+        padding: 0; /* Remove paddings extras que podem desalinhá-lo do container */
+    }
+
+    .material-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: left; /* Garante que o título também acompanhe a esquerda */
+    }
+
+    .material-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        /* Remove qualquer centralização residual */
+        display: block; 
+    }
+}
 
 
         /* Conteúdo por cima */
