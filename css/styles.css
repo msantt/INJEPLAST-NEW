@@ -566,7 +566,7 @@
         }
 
         .sobre-text p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--text-dark);
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -575,7 +575,7 @@
         .sobre-visual {
             position: relative;
             height: 500px;
-            border-radius: 20px;
+            border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -591,7 +591,7 @@
             height: relative;
             object-fit: contain;
             /* mostra a imagem inteira */
-            border-radius: 20px;
+            border-radius: 8px;
             z-index: 0;
         }
 
@@ -620,6 +620,89 @@
             animation: slide 30s linear infinite;
             z-index: 2;
         }
+
+
+
+
+        /* Objetivo da Empresa */
+        .material {
+            background: var(--white);
+        }
+
+        .material-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.3fr 1.1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .material-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .material-text p {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .material-visual {
+            position: relative;
+            height: 420px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: transparent;
+            /* ou transparente */
+        }
+
+        .material-visual img {
+             position: relative;
+    inset: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;   /* muda de 'contain' para 'cover' - estica para preencher */
+    border-radius: 8px;  /* borda arredondada na imagem */
+    z-index: 0;
+    border: 2px solid #c0c0c0; /* borda leve ao redor da imagem */
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05); /* sombra muito leve para suavizar */
+        }
+
+        /* Gradiente sobre a imagem */
+        .material-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(transparent) 0%, transparent, 100%);
+            opacity: 0.6;
+            /* controla a intensidade do gradiente */
+            z-index: 1;
+        }
+
+        /* Efeito animado */
+        .material-visual::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent px,
+                    rgba(255, 255, 255, 0.05) 20px,
+                    rgba(255, 255, 255, 0.05) 40px);
+            animation: slide 30s linear infinite;
+            z-index: 2;
+        }
+
+
+
 
         /* Conteúdo por cima */
         .conteudo {
@@ -1060,22 +1143,31 @@
 
         .footer-text {
             color: var(--secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 0.95rem;
         }
 
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            justify-content: center; /* centraliza horizontalmente */
+            gap: 2.5rem; /* aumenta espaço entre os ícones (2.5rem = 40px) */
+            align-items: center;
+            padding: 3rem; /* espaço interno em todas as direções */
+            margin-bottom: 0; /* garante que não tem margem extra */
         }
+
+        .social-links a img {
+        width: 4rem; /* 64px cada ícone */
+        display: block;
+        transition: transform 0.3s ease; /* efeito suave ao passar o mouse */
+    }
 
         .social-links a {
             color: var(--secondary);
             font-size: 1.5rem;
             transition: all 0.3s ease;
         }
+
 
         .social-links a:hover {
             color: var(--primary);
